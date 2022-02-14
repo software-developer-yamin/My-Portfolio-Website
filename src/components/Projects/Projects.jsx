@@ -1,8 +1,24 @@
-import React from 'react';
-
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
-import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
-import { projects } from '../../constants/constants';
+import Image from "next/image";
+import React from "react";
+import { projects } from "../../constants/constants";
+import {
+  Section,
+  SectionDivider,
+  SectionTitle,
+} from "../../styles/GlobalComponents";
+import {
+  BlogCard,
+  CardInfo,
+  ExternalLinks,
+  GridContainer,
+  HeaderThree,
+  Hr,
+  Img,
+  Tag,
+  TagList,
+  TitleContent,
+  UtilityList,
+} from "./ProjectsStyles";
 
 const Projects = () => (
   <Section nopadding id="projects">
@@ -19,7 +35,7 @@ const Projects = () => (
             </TitleContent>
             <CardInfo className="card-info">{p.description}</CardInfo>
             <div>
-              <TitleContent>Technology</TitleContent>
+              <TitleContent>Stack</TitleContent>
               <TagList>
                 {p.tags.map((t, i) => {
                   return <Tag key={i}>{t}</Tag>;
@@ -27,8 +43,8 @@ const Projects = () => (
               </TagList>
             </div>
             <UtilityList>
-              <ExternalLinks href={p.visit}>Live Demo</ExternalLinks>
-              <ExternalLinks href={p.source}>GitHub Code</ExternalLinks>
+              <ExternalLinks href={p.visit}>Live</ExternalLinks>
+              <ExternalLinks href={p.source}>Code</ExternalLinks>
             </UtilityList>
           </BlogCard>
         );
